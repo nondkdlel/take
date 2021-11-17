@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="join" class="members-zone">
+            <div class="inner-content">
+                <div class="head">
+                    <h1>Join</h1>
+                    <p>반갑습니다. 테이크호텔에 오신 것을 환영합니다 !</p>
+                </div>
+                <!-- end head -->
+                <!-- 21/07/01 line 39 join-form 항목 추가 -->
+                <form id="attend_form" class="join-form" action="join_step02.html">
+                    <div class="inp-box">
+                        <p>아이디<span>*</span></p>
+                        <div class="join-id">
+                            <input type="text" name="" id="username" placeholder="아이디">
+                            <input class="double-chk" type="button" value="중복 확인" onclick="idCheck();">
+                            <p class="alert"></p>
+                            <!-- <p class="alert">아이디 중복확인을 해주세요.</p> -->
+                        </div>
+                        <!-- end join-id -->
+                    </div>
+                    <!-- end inp-box -->
+                    <div class="inp-box pw-inp">
+                        <p>비밀번호<span>*</span></p>
+                        <input type="password" name="" id="password" placeholder="비밀번호">
+                        <p class="alert"></p>
+                        <!-- <p class="alert ">비밀번호를 확인해주세요.</p> -->
+                    </div>
+                    <!-- end inp-box -->
+                    <div class="inp-box pw-chk-inp">
+                        <p>비밀번호 확인<span>*</span></p>
+                        <input type="password" name="" id="password2" placeholder="비밀번호 확인">
+                        <p class="alert"></p>
+                    </div>
+                    <!-- end inp-box -->
+                    <input class="stepMove" type="button" value="다음으로" onclick="nextStep();">
+                </form>
+                <!-- end join-form -->
+                <!-- 21/07/01 line 63 join-form 항목 추가 -->
+                <div class="customer-tab ">
+                    <p>이미 회원이신가요? <a href="login.html ">로그인</a></p>
+                </div>
+                <!-- end customer-tab -->
+            </div>
+            <!-- end inner-content -->
+        </div>
+        <!-- end join -->
+        <div id="footers "></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js "></script>
+    <script src="js/common.js "></script>
+    <script src="js/main.js "></script>
+    <script>
+        // function idCheck() {
+        //     $.ajax({
+        //         type: "POST ",
+        //         url: "http://take-hotel.com/posts/register_idcheck/",
+        //         data: {
+        //             'username': $("#username ").val(),
+        //             'csrfmiddlewaretoken': $("input[name=csrfmiddlewaretoken]").val()
+        //         },
+        //         success: function(response) {
+        //             if ((response) == 0) {
+        //                 $("#join .join-id .alert").text("이미 등록된 아이디입니다.");
+
+        //             } else {
+        //                 $("#join .join-id .alert").text("사용 가능한 아이디입니다. ").css("color ", "#00B441");
+        //             }
+        //         }
+        //     })
+        // }
+
+        $("#username").keyup(function() {
+
+            var id_val = $('#username').val();
+
+            var ko_check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            var checkSpc = /[~!@#$%^&*()_+|<>?:{}]/;
+
+            if (ko_check.test(id_val)) {
+                $(".join-id .alert").text("아이디는 영문으로 입력해주세요.");
+            } else if (checkSpc.test(id_val)) {
+                $(".join-id .alert").text("아이디에는 특수문자를 사용할 수 없습니다.");
+            } else {
+                $(".join-id .alert").text("");
+            }
+
+        });
+
+        $('#password2').keyup(function() {
+
+            if ($('#password').val() != $('#password2').val()) {
+                $('.pw-chk-inp .alert').text('비밀번호가 일치하지 않습니다.');
+            } else {
+                $('.pw-chk-inp .alert').text('비밀번호가 일치합니다.').css('color', '#00B441');
+            }
+
+        });
+
+
+        // password alert
+        function nextStep() {
+            if (!$("#username").val()) {
+                $("#join .join-id .alert").text("아이디를 입력하세요.");
+            } else if (!$('#password').val()) {
+                $('.pw-inp .alert').text('비밀번호를 입력해주세요.');
+            } else if (!$('#password2').val()) {
+                $('.pw-chk-inp .alert').text('비밀번호 확인을 입력해주세요.');
+            } else {
+                $('#attend_form').submit();
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="join" class="members-zone join-us">
+            <form class="inner-content">
+                <div class="head">
+                    <h1>Join us</h1>
+                    <p>환영합니다. 관련 키워드를 선택해주시면<br>딱 맞는 프로그램을 추천해드릴게요.</p>
+                </div>
+                <!-- end head -->
+                <div class="keyword">
+                    <input type="checkbox" name="" id="" value=""><label for="">#커플</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#크리에이터</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#친구랑</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#가족</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#웰니스</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#비즈니스</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#네트워킹</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#리프레시</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#맛집</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#쇼핑</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#클래스</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#액티비티</label>
+                    <input type="checkbox" name="" id="" value=""><label for="">#Kids</label>
+                </div>
+                <!-- end keyword -->
+                <div class="user-btn">
+                    <input type="submit" value="입장하기" onclick="location.href='index.html'">
+                    <input type="button" value="다음에하기" onclick="location.href='index.html'">
+                </div>
+                <!-- end user-btn -->
+            </form>
+            <!-- end inner-content -->
+        </div>
+        <!-- end join -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // 21/06/29 line 76 script add
+        $(function() {
+            $("#join .keyword input[type='checkbox']+label").click(function() {
+                $("#join .keyword input[type='checkbox']+label").removeClass("on");
+                $(this).addClass("on");
+            });
+        })
+    </script>
+</body>
+
+</html>

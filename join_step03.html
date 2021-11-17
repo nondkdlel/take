@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- selectBox CSS -->
+    <link rel="stylesheet" href="plugin/selectBox_custom/selectric.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="join" class="members-zone">
+            <div class="inner-content">
+                <div class="head">
+                    <h1>Join</h1>
+                    <p>예약 안내를 위한 연락처를 알려주세요.</p>
+                </div>
+                <!-- end head -->
+                <form id="attend_form" class="join-form" action="join_us.html">
+                    <div class="inp-box">
+                        <p>이메일<span>*</span></p>
+                        <div class="user-email">
+                            <input type="text" name="" id="user_id" placeholder="아이디">
+                            <span class="at">@</span>
+                            <select name="" id="" class="addr-sel">
+                                <option value="naver.com">naver.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="hanmail.net">hanmail.net</option>
+                                <option value="direct">직접입력</option>
+                            </select>
+                            <div class="selBoxDirect">
+                                <input type="text" name="">
+                                <button class="hide-direct" type="button"><img src="img/close_btn.png" alt=""></button>
+                            </div>
+                            <p class="alert"></p>
+                        </div>
+                        <!-- end user-email -->
+                    </div>
+                    <!-- end inp-box -->
+                    <div class="inp-box tel-inp">
+                        <p>휴대폰<span>*</span></p>
+                        <div class="user-phone">
+                            <input type="tel" name="" id="user_tel" placeholder="'-'없이 번호만 입력">
+                            <input type="button" value="인증번호전송">
+                            <p class="alert"></p>
+                        </div>
+                        <!-- end user-phone -->
+                        <div class="cert-area">
+                            <input type="tel" name="" id="num" placeholder="인증번호를 입력해주세요.">
+                            <span class="alert"></span>
+                        </div>
+                        <!-- end user-phone -->
+                    </div>
+                    <!-- end inp-box -->
+                    <div class="tos-area">
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="tos-chk" id="tos-chk">
+                                <label for="tos-chk"><span>[필수]<a href="about_privacy.html" target="_blank">개인정보처리방침</a>에 따른 개인정보 수집 및 활용에 동의합니다.</span>
+                            </li>
+                            <li><input type="checkbox" name="tos-chk01" id="tos-chk01">
+                                <label for="tos-chk01"><span>(선택) 프로모션 알림 이메일을 받겠습니다.</span></label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="tos-chk02" id="tos-chk02">
+                                <label for="tos-chk02"><span>(선택) 프로모션 알림 문자를 받겠습니다.</span></label>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- end tos-area -->
+                    <input class="stepMove" type="button" value="완료" onclick="joinUs();">
+                </form>
+                <!-- end join-form -->
+                <div class="customer-tab">
+                    <p>이미 회원이신가요? <a href="login.html">로그인</a></p>
+                </div>
+                <!-- end customer-tab -->
+            </div>
+            <!-- end inner-content -->
+        </div>
+        <!-- end join -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scrollbar -->
+    <link href="plugin/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- selectBox.js -->
+    <script src="plugin/selectBox_custom/jquery.selectric.js"></script>
+    <script>
+        $(function() {
+
+            $('select').selectric({
+                disableOnMobile: false,
+                nativeOnMobile: false
+            });
+
+            $(".selBoxDirect").hide();
+            $(".addr-sel").selectric().on("change", function() {
+                if ($(".addr-sel").val() == "direct") {
+                    $(".selectric-addr-sel").hide();
+                    $(".selBoxDirect").show();
+                } else {
+                    $(".selectric-addr-sel").show();
+                    $(".selBoxDirect").hide();
+                }
+            });
+            $(".selBoxDirect .hide-direct").on("click", function() {
+                $(".selectric-addr-sel").show();
+                $(".selBoxDirect").hide();
+            });
+        });
+        // line 136 21/11/16 joinUs 수정
+        function joinUs() {
+
+            if (!$("#user_id").val() || !$("#user_tel").val() || $("#tos-chk").is(":checked") == false || !$("#num").val()) {
+                if (!$("#user_id").val()) {
+                    $("#join .user-email .alert").text("이메일을 입력해주세요.");
+                } else {
+                    $("#join .user-email .alert").text("");
+                }
+
+                if (!$("#user_tel").val()) {
+                    $("#join .tel-inp .user-phone .alert").text("휴대폰 번호를 입력해주세요.");
+                } else {
+                    $("#join .tel-inp .user-phone .alert").text("");
+                }
+
+                if ($("#tos-chk").is(":checked") == false) {
+                    alert("필수항목에 동의해주세요.")
+                }
+
+                if (!$("#num").val()) {
+                    $("#join .tel-inp .cert-area .alert").text("인증번호를 입력해주세요.");
+                } else {
+                    $("#join .tel-inp .cert-area .alert").text("");
+                }
+
+            } else {
+                $("#attend_form").submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

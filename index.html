@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- selectBox css -->
+    <link rel="stylesheet" href="plugin/selectBox_custom/selectric.css">
+    <!-- swiper css-->
+    <link rel="stylesheet" href="plugin/swiper/swiper.min.css">
+    <!-- scrollbar css-->
+    <link rel="stylesheet" href="plugin/scrollbar/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <!-- 21/07/01 line 38 main visual 수정 -->
+        <div id="main-visual">
+            <!-- <div class="visual-Swiper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img class="web_img" src="img/dummy_img.jpg" alt="">
+                        <img class="m_img" src="img/dummy_img.jpg" alt="">
+                        <div class="container">
+                            <div class="visual-content">
+                                <ul>
+                                    <li><i class="fas fa-headphones"></i>신나는</li>
+                                    <li><i class="fas fa-headphones"></i>인증샷</li>
+                                    <li><i class="fas fa-headphones"></i>네트워킹</li>
+                                </ul>
+                                <h1>현직 셰프와 함께 하는 멕시코 스트리트<br> 타코 클래스01</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="web_img" src="img/dummy_img.jpg" alt="">
+                        <img class="m_img" src="img/dummy_img.jpg" alt="">
+                        <div class="container">
+                            <div class="visual-content">
+                                <ul>
+                                    <li><i class="fas fa-headphones"></i>신나는</li>
+                                    <li><i class="fas fa-headphones"></i>인증샷</li>
+                                    <li><i class="fas fa-headphones"></i>네트워킹</li>
+                                </ul>
+                                <h1>현직 셰프와 함께 하는 멕시코 스트리트<br> 타코 클래스02</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img class="web_img" src="img/dummy_img.jpg" alt="">
+                        <img class="m_img" src="img/dummy_img.jpg" alt="">
+                        <div class="container">
+                            <div class="visual-content">
+                                <ul>
+                                    <li><i class="fas fa-headphones"></i>신나는</li>
+                                    <li><i class="fas fa-headphones"></i>인증샷</li>
+                                    <li><i class="fas fa-headphones"></i>네트워킹</li>
+                                </ul>
+                                <h1>현직 셰프와 함께 하는 멕시코 스트리트<br> 타코 클래스03</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div> visual-Swiper -->
+            <div class="filterWrap"></div>
+            <!-- 21/10/28 line 85 main-visual 이미지 수정 -->
+            <img src="img/main_visual.jpg" alt="">
+            <div id="banner" class="rest-noti">
+                <div class="tit-box">
+                    <span>Take a rest!</span>
+                    <p>언제 방문하시나요? 객실 안내 해드릴게요!</p>
+                </div>
+                <!-- end tit-box -->
+                <div class="setting-search font-0">
+                    <div class="auto-rule">
+                        <div class="calendar">
+                            <input type="text" id="rest_dateIn" readonly placeholder="체크인">
+                            <input type="text" id="rest_dateOut" readonly placeholder="체크아웃">
+                        </div>
+                        <!-- end calendar -->
+                        <!-- 21/11/02 line 101 워딩 수정 -->
+                        <div class="selectBox person-sel banner-sel" style="margin-right: 30px;">
+                            <select name="" id="" class="mCustomScrollbar" data-mcs-theme="dark-thick">
+                                <option>객실 수 1</option>
+                            </select>
+                        </div>
+                        <!-- end selectBox -->
+                        <div class="selectBox person-sel banner-sel" style="margin-right: 30px;">
+                            <select name="" id="" class="mCustomScrollbar" data-mcs-theme="dark-thick">
+                                <option value="">성인 1</option>
+                                <option value="">성인 2</option>
+                                <option value="">성인 3</option>
+                                <option value="">성인 4</option>
+                            </select>
+                        </div>
+                        <!-- end selectBox -->
+                        <div class="selectBox person-sel banner-sel">
+                            <select name="" id="" class="mCustomScrollbar" data-mcs-theme="dark-thick">
+                                <option value="">아동 0</option>
+                                <option value="">아동 1</option>
+                                <option value="">아동 2</option>
+                            </select>
+                        </div>
+                        <!-- end selectBox -->
+                    </div>
+                    <!-- end auto-rule -->
+                    <div class="view-link">
+                        <a href="#" onclick="viewBooking();">보러가기</a>
+                    </div>
+                    <!-- end view-link -->
+                </div>
+                <!-- end setting-search -->
+            </div>
+            <!-- end banner -->
+        </div>
+        <!-- end main-visual -->
+        <!------------ only mobile Content ------------>
+        <section id="sliderStory">
+            <div class="story-list">
+                <div class="common-thum">
+                    <img src="img/story_slider_thum01.png" alt="">
+                </div>
+                <!-- end common-thum -->
+                <div class="common-thum">
+                    <img src="img/story_slider_thum02.jpg" alt="">
+                </div>
+                <!-- end common-thum -->
+                <div class="common-thum">
+                    <img src="img/story_slider_thum03.jpg" alt="">
+                </div>
+                <!-- end common-thum -->
+                <!-- <div class="common-thum">
+                    <p>Title 04</p>
+                </div> -->
+                <!-- end common-thum -->
+                <!-- <div class="common-thum">
+                    <p>Title 05</p>
+                </div> -->
+                <!-- end common-thum -->
+                <!-- <div class="common-thum">
+                    <p>Title 06</p>
+                </div> -->
+                <!-- end common-thum -->
+                <!-- <div class="common-thum">
+                    <p>Title 07</p>
+                </div> -->
+                <!-- end common-thum -->
+            </div>
+            <!-- end story-list -->
+        </section>
+        <div class="story-sliders mOnly-slider">
+            <div class="slidersWrap">
+                <div class="mySwiper01 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_01.gif" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_02.gif" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_03.gif" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_04.gif" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_05.gif" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider01_06.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <!-- end myPagi -->
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div>
+            <!-- end slidersWrap-->
+            <div class="slidersWrap">
+                <div class="mySwiper02 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_04.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_05.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider02_06.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <!-- end myPagi -->
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div>
+            <!-- end slidersWrap-->
+            <div class="slidersWrap">
+                <div class="mySwiper03 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_01.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_02.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_03.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_04.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_05.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/story_slider03_06.jpg" alt="">
+                        </div>
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <!-- end myPagi -->
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="facility.html">자세히 보기</a>
+                </div>
+            </div>
+            <!-- end slidersWrap-->
+            <!-- <div class="slidersWrap">
+                <div class="mySwiper04 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>Slide 1</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 2</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 3</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 4</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 5</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 6</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div> -->
+            <!-- end slidersWrap-->
+            <!-- <div class="slidersWrap">
+                <div class="mySwiper05 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>Slide 1</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 2</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 3</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 4</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 5</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 6</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div> -->
+            <!-- end slidersWrap-->
+            <!-- <div class="slidersWrap">
+                <div class="mySwiper06 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>Slide 1</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 2</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 3</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 4</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 5</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 6</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div> -->
+            <!-- end slidersWrap-->
+            <!-- <div class="slidersWrap">
+                <div class="mySwiper07 common-swiper swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p>Slide 1</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 2</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 3</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 4</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 5</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <p>Slide 6</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next mySwiper-next"></div>
+                    <div class="swiper-button-prev mySwiper-prev"></div>
+                    <div class="myPagi swiper-pagination"></div>
+                    <button class="close-btn"><img src="img/slider_close_btn.png" alt=""></button>
+                    <a class="link" href="stay.html">자세히 보기</a>
+                </div>
+            </div> -->
+            <!-- end slidersWrap-->
+        </div>
+        <!-- end story-sliders -->
+        <!-- end sliderStory -->
+        <!------------ only mobile Content ------------>
+        <div id="main">
+            <section>
+                <div id="swiperContent_01" class="swiper-container swiperWrap">
+                    <div class="swiperHead">
+                        <h1>Take <span>Original</span></h1>
+                        <a class="all-view" href="play_original.html">전체보기</a>
+                    </div>
+                    <!-- end swiperHead -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                    <img src="img/facility_meetingroom_thum.jpeg" alt="">
+                                </a>
+                                <!-- end thum-img-->
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">test 내용 확인입니다. test 내용 확인입니다. test 내용 확인입니다. test 내용 확인입니다. </p>
+                                </div>
+                                <!-- end txt-box -->
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                    <img src="img/facility_meetingroom_thum.jpeg" alt="">
+                                </a>
+                                <!-- end thum-img-->
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                                <!-- end txt-box -->
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                    <img src="img/facility_meetingroom_thum.jpeg" alt="">
+                                </a>
+                                <!-- end thum-img-->
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                                <!-- end txt-box -->
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                    <img src="img/facility_meetingroom_thum.jpeg" alt="">
+                                </a>
+                                <!-- end thum-img-->
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요. 여기에 내용을 입력하세요. 여기에 내용을 입력하세요.</p>
+                                </div>
+                                <!-- end txt-box -->
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                    <img src="img/facility_meetingroom_thum.jpeg" alt="">
+                                </a>
+                                <!-- end thum-img-->
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                                <!-- end txt-box -->
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                </div>
+                <!-- end swiperContent_01 -->
+            </section>
+            <div class="container">
+                <!-- <div id="banner" class="activity bg-img">
+                    <div class="tit-box">
+                        <span>Take a look</span>
+                        <p>방문 일정에 진행 중인 액티비티</p>
+                    </div>
+                    <div class="calendar-check font-0">
+                        <div class="auto-rule">
+                            <div class="calendar">
+                                <input type="text" id="active-dateIn" readonly placeholder="체크인">
+                                <input type="text" id="active-dateOut" readonly placeholder="체크아웃">
+                            </div>
+                            <div class="selectBox banner-sel theme-select">
+                                <select name="" id="" class="list mCustomScrollbar" data-mcs-theme="dark-thick">
+                                    <option value="">방문 테마</option>
+                                    <option value="">#커플</option>
+                                    <option value="">#크리에이터</option>
+                                    <option value="">#친구랑</option>
+                                    <option value="">#가족</option>
+                                    <option value="">#웰니스</option>
+                                    <option value="">#비즈니스</option>
+                                    <option value="">#네트워킹</option>
+                                    <option value="">#리프레시</option>
+                                    <option value="">#맛집</option>
+                                    <option value="">#쇼핑</option>
+                                    <option value="">#클래스</option>
+                                    <option value="">#액티비티</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="view-link">
+                            <a href="day_search.html">보러가기</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- end activity-->
+            </div>
+            <!-- end container -->
+            <!-- 21/10/26 line 533 stay content add -->
+            <section style="margin-bottom: 90px;">
+                <div id="swiperContent_02" class="swiper-container swiperWrap">
+                    <div class="swiperHead">
+                        <h1>Stay</h1>
+                        <a class="all-view" href="stay.html">전체보기</a>
+                    </div>
+                    <!-- end swiperHead -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_take1_single_shower_detail.html">
+                                    <img src="img/TAKE_Stay_Take1_2_thum_01.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_take1_single_shower_detail.html'">
+                                    <p class="tit">Take1:<br>Single</p>
+                                    <p class="content-txt">책상과 싱글 침대의 샤워 타입 객실</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_take2_king_shower_detail.html">
+                                    <img src="img/TAKE_Stay_Take2_2_thum_01.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_take2_king_shower_detail.html'">
+                                    <p class="tit">Take2:<br>King Bed</p>
+                                    <p class="content-txt">킹 사이즈 침대가 딸린 샤워 타입 객실.</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_take3_king_shower_detail.html">
+                                    <img src="img/TAKE_Stay_Take3_2_thum_02.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_take3_king_shower_detail.html'">
+                                    <p class="tit">Take3:<br>King & Single</p>
+                                    <p class="content-txt">킹 & 싱글 침대의 샤워 타입 객실</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_take4_detail.html">
+                                    <img src="img/TAKE_Stay_Take4_thum_01.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_take4_detail.html'">
+                                    <p class="tit">Take4:<br>King & Loft</p>
+                                    <p class="content-txt">킹베드와 로프트 베드가 딸린 객실</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_takeX_pink_detail.html">
+                                    <img src="img/TakeX_Pink_Thum_01.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_takeX_pink_detail.html'">
+                                    <p class="tit">TakeX: <br>No Bed / Pink</p>
+                                    <p class="content-txt">Take3과 연결이 가능한 핑크 컨셉 파티룸</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="stay_take27_detail.html">
+                                    <img src="img/TAKE_Stay_Take27_thum_01.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='stay_take27_detail.html'">
+                                    <p class="tit">Take27:<br> Queen & Queen</p>
+                                    <p class="content-txt">테이크만의 프리미엄스위트 객실</p>
+                                </div>
+                                <!-- end thum-txt -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                </div>
+                <!-- end swiperContent_02 -->
+            </section>
+            <div id="tag-area" class="container">
+                <div class="rolling">
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-couple'">
+                        <p class="tag-name">#커플</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-creator'">
+                        <p class="tag-name">#크리에이터</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-friend'">
+                        <p class="tag-name">#친구랑</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-family'">
+                        <p class="tag-name">#가족</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-wellness'">
+                        <p class="tag-name">#웰니스</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-business'">
+                        <p class="tag-name">#비즈니스</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-network'">
+                        <p class="tag-name">#네트워킹</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-refresh'">
+                        <p class="tag-name">#리프레시</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-restaurant'">
+                        <p class="tag-name">#맛집</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-shopping'">
+                        <p class="tag-name">#쇼핑</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-class'">
+                        <p class="tag-name">#클래스</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-activity'">
+                        <p class="tag-name">#액티비티</p>
+                    </div>
+                    <!-- end tag-box -->
+                    <div class="tag-box" onclick="location.href='tag_search.html#tb-kids'">
+                        <p class="tag-name">#Kids</p>
+                    </div>
+                    <!-- end tag-box -->
+                </div>
+                <!-- end rolling -->
+            </div>
+            <!-- end tag-area -->
+            <!-- 21/06/29 line 640 tag-area tag-img hold -->
+            <section>
+                <div id="swiperContent_03" class="swiper-container swiperWrap">
+                    <div class="swiperHead">
+                        <h1>Play</h1>
+                        <a class="all-view" href="stay.html">전체보기</a>
+                    </div>
+                    <!-- end swierHead -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                </a>
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                </a>
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                </a>
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                </a>
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-vertical">
+                                <img class="fixed-logo" src="img/logo.png" alt="">
+                                <i class="far fa-heart"></i>
+                                <a class="thum-img" href="play_detail.html">
+                                </a>
+                                <div class="txt-box" onclick="location.href='play_detail.html'">
+                                    <p class="tit-txt">여기에 내용을 입력하세요. 최대 두줄까지 입력 가능</p>
+                                    <p class="sub-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                            <!-- end thum-vertical -->
+                        </div>
+                        <!-- end swiper-slide -->
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                </div>
+                <!-- end swiperContent_03 -->
+            </section>
+            <div class="promo-banner">
+                <!-- 21/07/01 추후 컨텐츠 업로드 -->
+                <img src="img/main_banner.jpg" alt="">
+            </div>
+            <!-- end promo-banner -->
+            <section>
+                <div id="swiperContent_04" class="swiper-container swiperWrap">
+                    <div class="swiperHead">
+                        <h1>Link</h1>
+                        <a class="all-view" href="link_collabo.html">전체보기</a>
+                    </div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="link_collabo_detail.html">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='link_collabo_detail.html'">
+                                    <p class="tit">Title here</p>
+                                    <p class="content-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="link_collabo_detail.html">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='link_collabo_detail.html'">
+                                    <p class="tit">Title here</p>
+                                    <p class="content-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="link_collabo_detail.html">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='link_collabo_detail.html'">
+                                    <p class="tit">Title here</p>
+                                    <p class="content-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="link_collabo_detail.html">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='link_collabo_detail.html'">
+                                    <p class="tit">Title here</p>
+                                    <p class="content-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="link_collabo_detail.html">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='link_collabo_detail.html'">
+                                    <p class="tit">Title here</p>
+                                    <p class="content-txt">여기에 내용을 입력하세요.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </section>
+            <section>
+                <div id="swiperContent_05" class="swiper-container swiperWrap">
+                    <div class="swiperHead">
+                        <h1>Facility</h1>
+                        <a class="all-view" href="facility.html">전체보기</a>
+                    </div>
+                    <!-- end swierHead -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="facility.html">
+                                    <img src="img/facility_ebs_thum.jpeg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='facility.html'">
+                                    <p class="tit">EBS Media Studio</p>
+                                    <p class="content-txt">EBS 최초 오프라인 스튜디오</p>
+                                </div>
+                            </div>
+                            <!-- end thum-square -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="facility.html">
+                                    <img src="img/facility_medialounge_thum.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='facility.html'">
+                                    <p class="tit">Media Lounge</p>
+                                    <p class="content-txt">테이크만의 시그니처 공간</p>
+                                </div>
+                            </div>
+                            <!-- end thum-square -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="facility.html">
+                                    <img src="img/facility_greenwall_thum.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='facility.html'">
+                                    <p class="tit">Green Wall</p>
+                                    <p class="content-txt">자연을 느낄 수 있는 그린월</p>
+                                </div>
+                            </div>
+                            <!-- end thum-square -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="facility.html">
+                                    <img src="img/facility_infinitypool_thum.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='facility.html'">
+                                    <p class="tit">Infinity Pool</p>
+                                    <p class="content-txt">도심 유일의 개방형 수영장</p>
+                                </div>
+                            </div>
+                            <!-- end thum-square -->
+                        </div>
+                        <!-- end swiper-slide -->
+                        <div class="swiper-slide">
+                            <div class="thum-square">
+                                <a class="thum-img" href="facility.html">
+                                    <img src="img/facility_memberslounge_thum.jpg" alt="">
+                                </a>
+                                <div class="thum-txt" onclick="location.href='facility.html'">
+                                    <p class="tit">Members Lounge</p>
+                                    <p class="content-txt">멤버만을 위한 프라이빗 공간</p>
+                                </div>
+                            </div>
+                            <!-- end thum-square -->
+                        </div>
+                        <!-- end swiper-slide -->
+                    </div>
+                    <!-- end swiper-wrapper -->
+                    <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                    <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                </div>
+                <!-- end slideWrap -->
+            </section>
+        </div>
+        <!-- end main -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <!-- Swiper CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- datepicker CDN -->
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- js -->
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/swiper_slider.js"></script>
+    <!-- Scrollbar -->
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- selectBox.js -->
+    <script src="plugin/selectBox_custom/jquery.selectric.js"></script>
+    <script>
+        $(function() {
+
+            // 21/10/26 banner alert msg change
+            // $("#banner.rest-noti .view-link").click(function() {
+            //     alert("홈페이지 예약 준비중입니다. 이용에 불편을 드려 죄송합니다. (여기어때, 야놀자, 네이버 검색 후 예약 가능)");
+            // });
+
+            $('select').selectric({
+                disableOnMobile: false,
+                nativeOnMobile: false
+            });
+
+            // canlendar_checkIn
+            $("#rest_dateIn").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    var date = $(this).val();
+
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#rest_dateOut").datepicker("option", "minDate", selectedDate);
+                }
+
+            });
+
+            // canlendar_checkOut
+            $("#rest_dateOut").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    var date = $(this).val();
+                    // console.log($(date));
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#rest_dateIn").datepicker("option", "maxDate", selectedDate);
+                }
+
+            });
+
+            $("#active-dateIn").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    var date = $(this).val();
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#active-dateOut").datepicker("option", "minDate", selectedDate);
+                }
+
+            });
+
+            // canlendar_checkOut
+            $("#active-dateOut").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    var date = $(this).val();
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#active-dateIn").datepicker("option", "maxDate", selectedDate);
+                }
+
+            });
+
+        });
+
+        // line 1006 21/11/15 alert 추가
+        function viewBooking() {
+            if (!$("#rest_dateIn").val() || !$("#rest_dateOut").val()) {
+                if (!$("#rest_dateIn").val()) {
+                    alert("체크인 날짜를 입력하세요.");
+                }
+                if (!$("#rest_dateOut").val()) {
+                    alert("체크아웃 날짜를 입력하세요.");
+                }
+            } else {
+                window.location.href = "booking.html"
+            }
+        }
+    </script>
+</body>
+
+</html>

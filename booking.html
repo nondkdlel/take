@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- datepicker CSS -->
+    <link rel="stylesheet" href="css/calendar.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- selectBox CSS -->
+    <link rel="stylesheet" href="plugin/selectBox_custom/selectric.css">
+    <!-- calendar css -->
+    <link rel="stylesheet" href="css/calendar.css">
+    <!-- scrollbar css -->
+    <link rel="stylesheet" href="plugin/scrollbar/jquery.mCustomScrollbar.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="booking" class="wrapContent">
+            <div class="modal-bg paymentBg">
+                <div id="modal" class="payment-receipt">
+                    <div class="scroll-bar mCustomScrollbar" data-mcs-theme="dark-thick">
+                        <div class="modalBody">
+                            <h1>객실 예약 내역</h1>
+                            <table>
+                                <colgroup>
+                                    <col width="25%">
+                                    <col width="75%">
+                                </colgroup>
+                                <tr>
+                                    <th>타입</th>
+                                    <td style="color: #4ec3e0 !important;">TAKE 1 스탠다드 더블룸 + 샤워</td>
+                                </tr>
+                                <tr>
+                                    <th>체크인</th>
+                                    <td id="checkIn">2021-00-00</td>
+                                </tr>
+                                <tr>
+                                    <th>체크아웃</th>
+                                    <td id="checkOut">2021-00-00</td>
+                                </tr>
+                                <tr>
+                                    <th>숙박일수</th>
+                                    <td>1박</td>
+                                </tr>
+                                <tr>
+                                    <th>인원</th>
+                                    <td>
+                                        <ul>
+                                            <li>성인 : 2</li>
+                                            <li>아동 : 0</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>객실 수</th>
+                                    <td>1실</td>
+                                </tr>
+                            </table>
+                            <ul class="guide-line">
+                                <li>객실/패키지 금액</li>
+                                <li>12,000원</li>
+                            </ul>
+                            <!-- end guide-line -->
+                            <h1>옵션 추가 내역</h1>
+                            <table>
+                                <colgroup>
+                                    <col width="25%">
+                                    <col width="75%">
+                                </colgroup>
+                                <tr>
+                                    <th>성인 조식</th>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <th>소인 조식</th>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <th>객실 수</th>
+                                    <td>1</td>
+                                </tr>
+                            </table>
+                            <ul class="guide-line">
+                                <li>객실/패키지 금액</li>
+                                <li>0원</li>
+                            </ul>
+                            <!-- end guide-line -->
+                            <ul class="total-box">
+                                <li>합계 금액 (VAT 포함)</li>
+                                <li><span>120,000</span> 원</li>
+                            </ul>
+                        </div>
+                        <!-- end modalBody -->
+                    </div>
+                    <div class="modalFooter">
+                        <input type="button" class="width-100" value="결제하기" onclick="location.href='booking_success.html'">
+                    </div>
+                    <!-- end modalFooter -->
+                </div>
+                <!-- end modal -->
+            </div>
+            <!-- end modal-bg -->
+            <div class="modal-bg popTos-bg">
+                <div id="modal" class="tos-modal">
+                    <div class="modalHeader">
+                        <h1 class="logo"><img src="img/logo.png" alt=""></h1>
+                        <button><img src="img/close_btn.png" alt=""></button>
+                    </div>
+                    <!-- end modalHeader -->
+                    <div class="modalBody">
+                        <h1>개인정보 수집 및 이용에 관한 동의</h1>
+                        <p>아래 개인정보 수집 및 이용에 동의합니다.</p>
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="80%">
+                            </colgroup>
+                            <div class="tbody">
+                                <tr>
+                                    <th>항목</th>
+                                    <td>이름, 연락처, 이메일, 신용카드 정보</td>
+                                </tr>
+                                <tr>
+                                    <th>이용 목적</th>
+                                    <td>서비스 이용 / 이용자 식별 및 본인 여부 확인, 계약 이행을 위한 연락 및 민원 업무 처리 등의 의사소통</td>
+                                </tr>
+                                <tr>
+                                    <th>보유 기간</th>
+                                    <td>예약일로부터 1년 보관 후 파기</td>
+                                </tr>
+                            </div>
+                            <!-- end tbody -->
+                        </table>
+                    </div>
+                    <!-- end modalBody -->
+                    <div class="modalFooter">
+                        <input type="button" value="확인">
+                    </div>
+                    <!-- end modalFooter -->
+                </div>
+                <!-- end modal -->
+            </div>
+            <!-- end modal-bg -->
+            <div class="modal-bg popNoti-bg">
+                <div id="modal" class="noti-modal">
+                    <div class="modalHeader">
+                        <h1 class="logo"><img src="img/modal_logo(bk).png" alt=""></h1>
+                    </div>
+                    <!-- end modalHeader -->
+                    <div class="modalBody">
+                        <h1>잠깐! 예약 전 꼭 확인하세요.</h1>
+                        <p>테이크 호텔은 선결제 후 예약이 확정되며, 예약이 확정된 고객은 방문 당일 오후 3시(체크인 기준)에 모바일 키가 발급되니 문자를 확인해주세요.</p>
+                    </div>
+                    <!-- end modalBody -->
+                    <div class="modalFooter">
+                        <input type="button" value="예, 확인했습니다." onclick="location.href='#moveTab04'">
+                    </div>
+                    <!-- end modalFooter -->
+                </div>
+                <!-- end modal -->
+            </div>
+            <!-- end modal-bg -->
+            <div class="container">
+                <div class="titleHead">
+                    <h1>Booking</h1>
+                    <p>예약부터 결제까지 쉽고 빠르게 도와드릴게요.</p>
+                </div>
+                <!-- end titleHead-->
+                <section class="stay-schedule show">
+                    <div class="part-name">
+                        <p>Step1. <span>투숙 일정 및 인원</span></p>
+                    </div>
+                    <!-- end part-name -->
+                    <div class="inner-content">
+                        <!-- 21/09/16 line 190 calendar 수정 -->
+                        <div class="calendar">
+                            <div class="inputBox">
+                                <p>체크인</p>
+                                <input type="text" id="datepicker-checkIn" class="width-100" readonly placeholder="날짜 입력">
+                            </div>
+                            <!-- end inputBox -->
+                            <div class="inputBox">
+                                <p>체크아웃</p>
+                                <input type="text" id="datepicker-checkOut" class="width-100" readonly placeholder="날짜 입력">
+                            </div>
+                            <!-- end inputBox -->
+                        </div>
+                        <!-- end calendar -->
+                        <div class="input-area">
+                            <div class="cm-box">
+                                <p class="thead">객실 수</p>
+                                <div class="selectBox selectType01" style="z-index: 21;">
+                                    <select name="" id="">
+                                        <option value="">1</option>
+                                    </select>
+                                </div>
+                                <!-- end selectBox -->
+                            </div>
+                            <!-- end cm-box -->
+                            <div class="num-person">
+                                <div class="cm-box">
+                                    <p class="thead">성인</p>
+                                    <div class="selectBox selectType02">
+                                        <select name="" id="">
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                        </select>
+                                    </div>
+                                    <!-- end selectBox -->
+                                </div>
+                                <!-- end cm-box -->
+                                <div class="cm-box">
+                                    <p class="thead">아동 (36개월~12세)</p>
+                                    <div class="selectBox selectType03">
+                                        <select name="" id="">
+                                            <option value="">0</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                        </select>
+                                    </div>
+                                    <!-- end selectBox -->
+                                </div>
+                                <!-- end cm-box -->
+                            </div>
+                            <!-- end num-person -->
+                        </div>
+                        <!-- end input-area -->
+                    </div>
+                    <!-- end inner-content -->
+                    <div class="next-btn">
+                        <a href="#moveTab01" onclick="moveStep02();">이용 가능한 객실 보기</a>
+                    </div>
+                    <!-- end view-btn -->
+                </section>
+                <section id="moveTab01" class="room-type">
+                    <div class="part-name">
+                        <p>Step2. <span>객실 타입</span></p>
+                    </div>
+                    <!-- end part-name -->
+                    <div class="tab-menu">
+                        <input class="on" type="button" value="객실">
+                        <input type="button" value="패키지">
+                    </div>
+                    <!-- end tab-menu -->
+                    <div class="inner-content">
+                        <div class="tabContent show">
+                            <div class="room-info">
+                                <div class="thum-img">
+                                    <img src="img/TakeX_Mint_Thum_01.jpg" alt="">
+                                </div>
+                                <!-- end thum-img -->
+                                <div class="info-txt">
+                                    <div class="room-head">
+                                        <div class="le-box">
+                                            <h1>Take 2 : King </h1>
+                                            <p class="price">149,000~</p>
+                                        </div>
+                                        <!-- end le-box -->
+                                        <div class="rg-box">
+                                            <ul>
+                                                <li>원</li>
+                                                <li>1박</li>
+                                            </ul>
+                                        </div>
+                                        <!-- end rg-box -->
+                                    </div>
+                                    <!-- end room-head -->
+                                    <p class="brief-info">Take 2 객실은 킹 사이즈 베드가 제공되어 여행과 비즈니스 출장에 이용하기 적합한 객실입니다. <br>2인 가족, 연인, 친구와의 여행에 적합하며 색다른 여행의 시작을 제공합니다.</p>
+                                    <a class="move-link" href="#moveTab02">예약하기</a>
+                                </div>
+                                <!-- end info-txt -->
+                            </div>
+                            <!-- end room-info -->
+                            <div class="room-info">
+                                <div class="thum-img">
+                                    <img src="img/TakeX_Mint_Thum_01.jpg" alt="">
+                                </div>
+                                <!-- end thum-img -->
+                                <div class="info-txt">
+                                    <div class="room-head">
+                                        <div class="le-box">
+                                            <h1>Take 2 : King </h1>
+                                            <p class="price">149,000~</p>
+                                        </div>
+                                        <!-- end le-box -->
+                                        <div class="rg-box">
+                                            <ul>
+                                                <li>원</li>
+                                                <li>1박</li>
+                                            </ul>
+                                        </div>
+                                        <!-- end rg-box -->
+                                    </div>
+                                    <!-- end room-head -->
+                                    <p class="brief-info">Take 2 객실은 킹 사이즈 베드가 제공되어 여행과 비즈니스 출장에 이용하기 적합한 객실입니다. <br>2인 가족, 연인, 친구와의 여행에 적합하며 색다른 여행의 시작을 제공합니다.</p>
+                                    <a class="move-link" href="#moveTab02">예약하기</a>
+                                </div>
+                                <!-- end info-txt -->
+                            </div>
+                            <!-- end room-info -->
+                            <div class="room-info">
+                                <div class="thum-img">
+                                    <img src="img/TakeX_Mint_Thum_01.jpg" alt="">
+                                </div>
+                                <!-- end thum-img -->
+                                <div class="info-txt">
+                                    <div class="room-head">
+                                        <div class="le-box">
+                                            <h1>Take 2 : King </h1>
+                                            <p class="price">149,000~</p>
+                                        </div>
+                                        <!-- end le-box -->
+                                        <div class="rg-box">
+                                            <ul>
+                                                <li>원</li>
+                                                <li>1박</li>
+                                            </ul>
+                                        </div>
+                                        <!-- end rg-box -->
+                                    </div>
+                                    <!-- end room-head -->
+                                    <p class="brief-info">Take 2 객실은 킹 사이즈 베드가 제공되어 여행과 비즈니스 출장에 이용하기 적합한 객실입니다. <br>2인 가족, 연인, 친구와의 여행에 적합하며 색다른 여행의 시작을 제공합니다.</p>
+                                    <a class="move-link" href="#moveTab02">예약하기</a>
+                                </div>
+                                <!-- end info-txt -->
+                            </div>
+                            <!-- end room-info -->
+                            <div class="room-info">
+                                <div class="thum-img">
+                                    <img src="img/TakeX_Mint_Thum_01.jpg" alt="">
+                                </div>
+                                <!-- end thum-img -->
+                                <div class="info-txt">
+                                    <div class="room-head">
+                                        <div class="le-box">
+                                            <h1>Take 2 : King </h1>
+                                            <p class="price">149,000~</p>
+                                        </div>
+                                        <!-- end le-box -->
+                                        <div class="rg-box">
+                                            <ul>
+                                                <li>원</li>
+                                                <li>1박</li>
+                                            </ul>
+                                        </div>
+                                        <!-- end rg-box -->
+                                    </div>
+                                    <!-- end room-head -->
+                                    <p class="brief-info">Take 2 객실은 킹 사이즈 베드가 제공되어 여행과 비즈니스 출장에 이용하기 적합한 객실입니다. <br>2인 가족, 연인, 친구와의 여행에 적합하며 색다른 여행의 시작을 제공합니다.</p>
+                                    <a class="move-link" href="#moveTab02">예약하기</a>
+                                </div>
+                                <!-- end info-txt -->
+                            </div>
+                            <!-- end room-info -->
+                            <div class="room-info">
+                                <div class="thum-img">
+                                    <img src="img/TakeX_Mint_Thum_01.jpg" alt="">
+                                </div>
+                                <!-- end thum-img -->
+                                <div class="info-txt">
+                                    <div class="room-head">
+                                        <div class="le-box">
+                                            <h1>Take 2 : King </h1>
+                                            <p class="price">149,000~</p>
+                                        </div>
+                                        <!-- end le-box -->
+                                        <div class="rg-box">
+                                            <ul>
+                                                <li>원</li>
+                                                <li>1박</li>
+                                            </ul>
+                                        </div>
+                                        <!-- end rg-box -->
+                                    </div>
+                                    <!-- end room-head -->
+                                    <p class="brief-info">Take 2 객실은 킹 사이즈 베드가 제공되어 여행과 비즈니스 출장에 이용하기 적합한 객실입니다. <br>2인 가족, 연인, 친구와의 여행에 적합하며 색다른 여행의 시작을 제공합니다.</p>
+                                    <a class="move-link" href="#moveTab02">예약하기</a>
+                                </div>
+                                <!-- end info-txt -->
+                            </div>
+                            <!-- end room-info -->
+                            <!-- 21/11/05 empty-box add -->
+                            <div class="empty-box" style="display: none;">
+                                <p>해당 조건에 이용 가능한 객실이 없습니다.</p>
+                            </div>
+                            <!---------------------------->
+                        </div>
+                        <!-- end tabContent -->
+                        <div class="tabContent">
+                            <!-- 21/11/05 empty-box add -->
+                            <div class="empty-box">
+                                <p>해당 조건에 이용 가능한 패키지가 없습니다.</p>
+                            </div>
+                            <!---------------------------->
+                        </div>
+                        <!-- end tabContent -->
+                    </div>
+                    <!-- end inner-content -->
+                </section>
+                <div class="clear"></div>
+                <section id="moveTab02" class="option-select">
+                    <div class="part-name">
+                        <p>Step3. <span>옵션 선택</span></p>
+                    </div>
+                    <!-- end part-name -->
+                    <div class="inner-content font-0">
+                        <!-- 21/07/01 line 443 checkin&out content 추가 -->
+                        <div class="common-info check-date">
+                            <div class="col-tit">
+                                <h2>체크인 예상 시간</h2>
+                            </div>
+                            <div class="input-area">
+                                <div class="cm-box">
+                                    <!-- <p class="thead">체크인 예상 시간</p> -->
+                                    <div class="selectBox selectType04" style="z-index: 24;">
+                                        <select name="" id="">
+                                            <option value="">15:00</option>
+                                            <option value="">16:00</option>
+                                            <option value="">17:00</option>
+                                            <option value="">18:00</option>
+                                            <option value="">19:00</option>
+                                            <option value="">20:00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="cm-box">
+                                    <!-- <div class="thead">
+                                        <p>체크아웃 예상 시간</p>
+                                    </div>
+                                    <div class="selectBox selectType05" style="z-index: 23;">
+                                        <select name="" id="">
+                                            <option value="">08:00</option>
+                                            <option value="">09:00</option>
+                                            <option value="">10:00</option>
+                                            <option value="">11:00</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                                <div class="cm-box"></div>
+                            </div>
+                        </div>
+                        <!-- end common-info -->
+                        <div class="common-info">
+                            <div class="col-tit">
+                                <h2>조식 및 베드 (필수)</h2>
+                                <p>조식이 포함된 패키지를 예약하실 경우 추가 인원에 대한 조식만 선택해주시기 바랍니다.</p>
+                            </div>
+                            <div class="input-area">
+                                <div class="cm-box">
+                                    <p class="thead">성인조식</p>
+                                    <div class="selectBox selectType06" style="z-index: 22;">
+                                        <select name="" id="">
+                                            <option value="">0</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- end cm-box -->
+                                <div class="cm-box">
+                                    <!-- <div class="thead">
+                                        <p>아동 조식</p>
+                                        <button>
+                                            <a id="toolTip" href="#">
+                                                아동은 12세까지 입니다.
+                                            </a>
+                                            <i class="fas fa-exclamation"></i>
+                                        </button>
+                                    </div>
+                                    <div class="selectBox selectType07" style="z-index: 21;">
+                                        <select name="" id="">
+                                            <option value="">0</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                                <!-- end cm-box -->
+                                <div class="cm-box">
+                                    <!-- <div class="thead">
+                                        <p>엑스트라 베드</p>
+                                        <button>
+                                            <a id="toolTip" href="#">
+                                                추가요금 발생 항목입니다.
+                                            </a>
+                                            <i class="fas fa-exclamation"></i>
+                                        </button>
+                                    </div>
+                                    <div class="selectBox selectType08">
+                                        <select name="" id="">
+                                            <option value="">0</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                            <option value="">4</option>
+                                            <option value="">5</option>
+                                        </select>
+                                    </div> -->
+                                </div>
+                                <!-- end cm-box -->
+                            </div>
+                            <!-- end input-area -->
+                        </div>
+                        <!-- end common-info -->
+                        <div class="common-info etc-inp">
+                            <div class="col-tit">
+                                <h2>기타 (선택)</h2>
+                            </div>
+                            <!-- end col-tit -->
+                            <div class="cm-box">
+                                <div class="thead">
+                                    <p>차량 번호 사전 등록</p>
+                                    <button>
+                                        <a id="toolTip" href="#">
+                                            객실 당 1대 주차 요금 지원
+                                        </a>
+                                        <i class="fas fa-exclamation"></i>
+                                    </button>
+                                </div>
+                                <!-- end thead -->
+                                <input type="text" name="" id="" placeholder="eg.01두 1234">
+                            </div>
+                            <!-- end cm-box -->
+                            <div class="cm-box request-inp">
+                                <p class="thead">요청 사항</p>
+                                <input type="text" name="" id="" placeholder="요청 사항에 따라 요금이 추가될 수 있습니다.">
+                            </div>
+                            <!-- end cm-box -->
+                        </div>
+                        <!-- end common-info -->
+                    </div>
+                    <!-- end inner-content -->
+                    <div class="next-btn">
+                        <a href="#moveTab03">다음으로</a>
+                    </div>
+                    <!-- end view-btn -->
+                </section>
+                <section id="moveTab03" class="customer-info">
+                    <div class="part-name">
+                        <p>Step4. <span>예약 및 투숙 고객정보</span></p>
+                    </div>
+                    <!-- end part-name -->
+                    <div class="inner-content">
+                        <div class="reservation-info common-info">
+                            <div class="col-tit">
+                                <h2>예약 고객 정보 (필수)</h2>
+                            </div>
+                            <!-- end col-tit -->
+                            <div class="floor">
+                                <div class="user-name">
+                                    <div class="cm-box">
+                                        <p class="thead">성</p>
+                                        <input type="text" name="" id="" placeholder="홍">
+                                    </div>
+                                    <!-- end cm-box -->
+                                    <div class="cm-box">
+                                        <p class="thead">이름</p>
+                                        <input type="text" name="" id="" placeholder="길동">
+                                    </div>
+                                    <!-- end cm-box -->
+                                </div>
+                                <div class="cm-box cm-select">
+                                    <p class="thead">성별</p>
+                                    <div class="selectBox selectType09" style="z-index: 24;">
+                                        <select name="" id="">
+                                            <option value="">성별을 선택해주세요.</option>
+                                            <option value="">남</option>
+                                            <option value="">여</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- end cm-box -->
+                            </div>
+                            <!-- end floor -->
+                            <div class="floor">
+                                <div class="cm-box">
+                                    <p class="thead">휴대전화</p>
+                                    <input type="text" name="" id="" placeholder="'-' 없이 번호만 입력">
+                                </div>
+                                <!-- end cm-box -->
+                                <div class="email-inp">
+                                    <div class="cm-box">
+                                        <p class="thead">이메일</p>
+                                        <input type="text" name="" id="" placeholder="이메일 아이디">
+                                    </div>
+                                    <!-- end cm-box -->
+                                    <span class="at">@</span>
+                                    <div class="cm-box">
+                                        <div class="selectBox addr-select selectType10" style="z-index: 23;">
+                                            <select name="" id="" class="addr-sel01">
+                                                <option value="naver.com">naver.com</option>
+                                                <option value="gmail.com">gmail.com</option>
+                                                <option value="hanmail.net">hanmail.net</option>
+                                                <option value="direct">직접입력</option>
+                                            </select>
+                                            <div class="selBoxDirect direct01">
+                                                <input type="text" name="">
+                                                <button class="hide-direct"><img src="img/close_btn.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <!-- end selectbox -->
+                                    </div>
+                                    <!-- end cm-box -->
+                                </div>
+                                <!-- end email-inp -->
+                            </div>
+                            <!-- end floor -->
+                        </div>
+                        <!-- end reservation-info -->
+                        <div class="stay-info common-info">
+                            <div class="col-tit">
+                                <h2>투숙 고객 정보 (필수)</h2>
+                                <div class="apply">
+                                    <input type="checkbox" name="same_check" id="same_check">
+                                    <label for="same_check">
+                                        <span>예약자 정보와 같습니다</span>
+                                    </label>
+                                </div>
+                                <!-- end apply -->
+                            </div>
+                            <!-- end col-tit -->
+                            <div class="floor">
+                                <div class="user-name">
+                                    <div class="cm-box first-inp">
+                                        <p class="thead">성</p>
+                                        <input type="text" name="" id="first-nm" placeholder="홍">
+                                    </div>
+                                    <!-- end cm-box -->
+                                    <div class="cm-box last-inp">
+                                        <p class="thead">이름</p>
+                                        <input type="text" name="" id="last-nm" placeholder="길동">
+                                    </div>
+                                    <!-- end cm-box -->
+                                </div>
+                                <!-- end user-name -->
+                                <div class="cm-box cm-select">
+                                    <p class="thead">성별</p>
+                                    <div class="selectBox selectType11" style="z-index: 22;">
+                                        <select name="gender-sel" id="gender-sel">
+                                            <option value="non-sel">성별을 선택해주세요.</option>
+                                            <option value="01">남</option>
+                                            <option value="02">여</option>
+                                        </select>
+                                    </div>
+                                    <!-- end selectBox -->
+                                </div>
+                                <!-- end cm-box -->
+                            </div>
+                            <!-- end floor -->
+                            <div class="floor">
+                                <div class="cm-box cell-inp">
+                                    <p class="thead">휴대전화</p>
+                                    <input type="text" name="" id="user-phone" placeholder="'-' 없이 번호만 입력">
+                                </div>
+                                <!-- end cm-box -->
+                                <div class="email-inp">
+                                    <div class="cm-box">
+                                        <p class="thead">이메일</p>
+                                        <input type="text" name="" id="user-email" placeholder="이메일 아이디">
+                                    </div>
+                                    <!-- end cm-box -->
+                                    <span class="at">@</span>
+                                    <div class="cm-box">
+                                        <div class="selectBox addr-select selectType12" style="z-index: 21;">
+                                            <select name="e-addr" id="" class="addr-sel02">
+                                                <option value="naver.com">naver.com</option>
+                                                <option value="hanmail.net">hanmail.net</option>
+                                                <option value="gmail.com">gmail.com</option>
+                                                <option value="direct">직접입력</option>
+                                            </select>
+                                            <div class="selBoxDirect direct02">
+                                                <input type="text" name="">
+                                                <button class="hide-direct"><img src="img/close_btn.png" alt=""></button>
+                                            </div>
+                                        </div>
+                                        <!-- end selectbox -->
+                                    </div>
+                                    <!-- end cm-box -->
+                                </div>
+                                <!-- end email-inp -->
+                            </div>
+                            <!-- end floor -->
+                        </div>
+                        <!-- end stay-info -->
+                    </div>
+                    <!-- end inner-content -->
+                    <div class="next-btn">
+                        <input type="button" value="다음으로" onclick="moveStep04();">
+                    </div>
+                </section>
+                <section id="moveTab04" class="agreement">
+                    <div class="part-name">
+                        <p>Step5. <span>체크인 정보</span></p>
+                    </div>
+                    <!-- end part-name -->
+                    <div class="inner-content">
+                        <div class="common-info">
+                            <div class="col-tit">
+                                <h2>약관 동의</h2>
+                            </div>
+                            <div class="tos-box">
+                                <p><input type="checkbox" name="agr_check" id="agr_check"><label for="agr_check"><span>[필수] 개인정보 수집 및 이용에 관한 동의</span></label></p>
+                                <input type="button" value="내용보기">
+                            </div>
+                            <!-- end tos-box -->
+                        </div>
+                        <!-- end common-info -->
+                        <div class="use-info common-info">
+                            <div class="col-tit">
+                                <h2>이용 안내</h2>
+                            </div>
+                            <!-- 21/11/03 tos-box 워딩 수정 -->
+                            <div class="tos-box">
+                                <div class="noti">
+                                    <p>유의사항</p>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>홈페이지의 모든 이미지는 연출 컷으로 실제와 다를 수 있습니다. 이미지와 다른 객실로 배정될 수 있으며. 이로인한 취소 및 변경은 불가하오니 양해바랍니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>체크인 15시, 체크아웃 11시입니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>스마트 체크인/ 체크아웃<br> 체크인 : 예약시 입력해주신 체크인 시간에 스마트키 발송될 예정 입니다.<br> 체크아웃 : 스마트키 화면에 있는 '익스프레스 체크아웃' 버튼을 눌러주셔야 합니다. ‘체크아웃' 후에는 다시 체크인이 어려우니 유의바랍니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>전 객실은 금연입니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>예약하신 침대와 욕실 타입 다시 확인부탁드립니다. 본인의 부주의로 인한 객실 타입 변경은 어려우니 양해바랍니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>예약 시, 객실 당 투숙 가능 인원을 확인하시기 바랍니다. (정원 초과 시, 투숙이 거부될 수 있습니다.)</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>보호자 없는 미성년자 투숙을 금지합니다. 적발 시 강제 퇴실 조치 될 수 있습니다.(성인/미성년자 판단 기준은 연도기준이 아닌 만 나이로 판단합니다.)</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>반려견 동반 입실을 금지합니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>기준인원 추가시 성인 3만원, 소인 만원 추가 비용 발생(침구 추가 불가)<br> 객실별 기준인원<br> Take 1 : 성인 1인 (최대 성인 1인)<br> Take 2 : 성인 2인 (최대 성인 2인)<br> Take 3 : 성인 2인 (최대 성인 3인)<br> Take 4 : 성인 2인, 소인 1인(최대 성인 2인, 소인 2인)
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end noti -->
+                                <div class="noti">
+                                    <p>위약규정</p>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>1일 전 및 당일 No-Show의 경우 위약금 100% 부과</li>
+                                    </ul>
+                                </div>
+                                <!-- end noti -->
+                                <div class="noti">
+                                    <p>코로나 관련 규정</p>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>예약된 고객이라도 입구에서 실시하는 체열 검사시 37.5도 이상 감지되는 분은 입실이 제한될 수 있습니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>코로나 19 확산으로 인한 정부의 입국절차 강화 조치에 따라, 14일 이내 해외 입국자 및 자가격리 대상자의 투숙이 불가함을 알려드립니다.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <p class="point"></p>
+                                        </li>
+                                        <li>입국 후 24시간내 코로나 19 검사 및 음성PCR 판정자에 한해서만 입실 가능합니다. <br> * 해외 백신접종 완료자의 경우, 자가격리 면제서와 코로나 음성 판정서 지참 필수.</li>
+                                    </ul>
+                                </div>
+                                <!-- end noti -->
+                            </div>
+                            <!-- end tos-box -->
+                        </div>
+                        <!-- end common-info -->
+                    </div>
+                    <!-- end inner-content -->
+                </section>
+                <div class="total-price">
+                    <input type="button" value="150,000 결제하기">
+                </div>
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end booking -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- datepicker CDN -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- Scrollbar -->
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- selectBox.js -->
+    <script src="plugin/selectBox_custom/jquery.selectric.js"></script>
+    <script>
+        var n = "";
+        var check_in = "";
+        var check_out = "";
+        $(function() {
+
+            $('select').selectric({
+                disableOnMobile: false,
+                nativeOnMobile: false
+            });
+
+            $(".selBoxDirect").hide();
+            $(".addr-sel01").selectric().on("change", function() {
+                if ($(".addr-sel01").val() == "direct") {
+                    $(".selectric-addr-sel01").hide();
+                    $(".direct01").show();
+                } else {
+                    $(".selectric-addr-sel01").show();
+                    $(".direct01").hide();
+                }
+            });
+            $(".direct01 .hide-direct").on("click", function() {
+                $(".selectric-addr-sel01").show();
+                $(".direct01").hide();
+            });
+
+            $(".addr-sel02").selectric().on("change", function() {
+                if ($(".addr-sel02").val() == "direct") {
+                    $(".selectric-addr-sel02").hide();
+                    $(".direct02").show();
+                } else {
+                    $(".selectric-addr-sel02").show();
+                    $(".direct02").hide();
+                }
+            });
+            $(".direct02 .hide-direct").on("click", function() {
+                $(".selectric-addr-sel02").show();
+                $(".direct02").hide();
+            });
+
+
+            // step02
+            $("#booking .room-type .room-info .info-txt .move-link").click(function() {
+                $("#booking .option-select").addClass("show");
+                var scrollPosition = $("#booking .option-select").offset().top;
+                $("body,html").animate({
+                    scrollTop: scrollPosition
+                }, 500);
+
+                return false;
+            });
+
+            // 21/11/16 line 911 결제 버튼 수정
+
+            $("#booking .total-price input[type='button']").click(function() {
+                if ($("#booking .agreement .tos-box input[type='checkbox']").is(":checked") == true) {
+                    $(".paymentBg").show()
+                    $("#modal.payment-receipt").show();
+                    $("html,body").addClass("fixed");
+
+                } else {
+                    alert("개인정보 수집 및 이용에 관한 동의에 체크하세요.");
+                }
+            });
+
+            // canlendar_checkIn
+            $("#datepicker-checkIn").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    check_in = $(this).val();
+
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#datepicker-checkOut").datepicker("option", "minDate", selectedDate);
+                }
+
+            });
+            // canlendar_checkOut
+            $("#datepicker-checkOut").datepicker({
+                dateFormat: 'yy-mm-dd',
+                minDate: 0,
+                onSelect: function(dateText, inst) {
+                    check_out = $(this).val();
+
+                },
+                dayNames: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesShort: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                dayNamesMin: ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'],
+                onClose: function(selectedDate) {
+                    $("#datepicker-checkIn").datepicker("option", "maxDate", selectedDate);
+                }
+
+            });
+
+
+            (function($) {
+                $(window).on("load", function() {
+                    $(".payment-receipt .scroll-bar").mCustomScrollbar({
+                        axis: "y"
+                    });
+                });
+            })
+
+
+            $("#booking .customer-info .stay-info .apply input[type='checkbox']").click(function() {
+                if ($(this).is(":checked") == true) {
+                    $("#booking .customer-info .stay-info .floor").hide();
+                    $("#moveTab03 .next-btn input[type='button']").click(function() {
+                        $(".popNoti-bg").addClass("show");
+                        $("#modal.noti-modal").addClass("show");
+                    });
+                    n = "y";
+                } else {
+                    $("#booking .customer-info .floor").show();
+
+                }
+
+            });
+
+        });
+
+
+        // line 938 2021/11/15 추가
+        function moveStep02() {
+            if (!$("#datepicker-checkIn").val() || !$("#datepicker-checkOut").val()) {
+                alert("체크인/체크아웃 날짜를 선택하세요.")
+
+            } else {
+                $("#booking .stay-schedule .next-btn").click(function() {
+                    $("#booking .room-type").show();
+                    var scrollPosition = $("#booking .room-type").offset().top;
+                    $("body,html").animate({
+                        scrollTop: scrollPosition
+                    }, 500);
+
+                    return false;
+                });
+            }
+
+        }
+
+        function moveStep04() {
+            if (n != "y") {
+                var gen_option = $("select[name='gender-sel']").val();
+                if (!$("#first-nm").val()) {
+                    alert("필수 항목을 모두 입력하세요.")
+                } else if (!$("#last-nm").val()) {
+                    alert("필수 항목을 모두 입력하세요.")
+                } else if (gen_option == "non-sel") {
+                    alert("필수 항목을 모두 입력하세요.")
+                } else if (!$("#user-phone").val()) {
+                    alert("필수 항목을 모두 입력하세요.")
+                } else if (!$("#user-email").val()) {
+                    alert("필수 항목을 모두 입력하세요.")
+                } else {
+                    $(".popNoti-bg").addClass("show");
+                    $("#modal.noti-modal").addClass("show");
+
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

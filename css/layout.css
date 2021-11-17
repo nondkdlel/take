@@ -1,0 +1,140 @@
+/* layout.css */
+
+
+/* header */
+
+#open-menu {
+    display: none;
+}
+
+header {
+    z-index: 66;
+    height: 68px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.15);
+}
+
+.innerWrap {
+    max-width: 1920px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header .innerWrap .logo {
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    transform: translateY(-50%);
+}
+
+header .innerWrap .logo img {
+    max-width: 80px;
+}
+
+header .innerWrap .m-menu {
+    display: none;
+}
+
+header .innerWrap nav {
+    position: absolute;
+    top: 50%;
+    right: 180px;
+    transform: translateY(-50%);
+}
+
+header .innerWrap nav ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .innerWrap nav li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header .innerWrap nav li a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 20px 0;
+    margin: 0 15px;
+    display: block;
+}
+
+header .innerWrap nav li.on a {
+    border-bottom: 3px solid #4ec3e0;
+}
+
+header nav .booking {
+    margin-left: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    background: #626569;
+    color: #fff;
+    padding: 10px 24px;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 24px;
+    border: none;
+}
+
+.fixed-foot-menu {
+    display: none;
+}
+
+
+/* footer */
+
+footer {
+    padding: 80px 180px;
+}
+
+footer .f-logo {
+    display: inline-block;
+}
+
+footer .foot-info {
+    padding: 30px 0;
+}
+
+footer .foot-info p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a5a5a5;
+    line-height: 26px;
+}
+
+footer .foot-info p span {
+    font-size: 14px;
+    font-weight: 300;
+    color: #a5a5a5;
+    margin-right: 5px;
+}
+
+footer .foot-nav li {
+    display: inline-block;
+}
+
+footer .foot-nav li::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 14px;
+    background: #fff;
+    margin: 0 10px;
+}
+
+footer .foot-nav li:last-child:after {
+    background: none;
+}
+
+footer .foot-nav li a {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+}

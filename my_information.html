@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- selectBox CSS -->
+    <link rel="stylesheet" href="plugin/selectBox_custom/selectric.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="mypage" class="wrapContent">
+            <div class="container font-0">
+                <aside>
+                    <p class="pageTitle">My</p>
+                    <nav>
+                        <ul>
+                            <a href="my_reservation.html">
+                                <li>Reservation</li>
+                                <li>내 예약</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <a href="my_favorite.html">
+                                <li>Favorite</li>
+                                <li>찜한 프로그램</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <a class="on" href="my_information.html">
+                                <li>Information</li>
+                                <li>정보</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <!-- 21/06/29 line 58 pageHeade inline css add -->
+                    <div class="pageHead" style="margin-bottom: 20px;">
+                        <p>My Information</p>
+                    </div>
+                    <!-- end pageHead -->
+                    <div class="inner-content information">
+                        <table>
+                            <colgroup>
+                                <col width="90%">
+                                <col width="10%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>관심 키워드</th>
+                                    <td class="edit-btn">수정하기</td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td class="edit-btn">변경하기</td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td class="edit-btn">변경하기</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- 21/06/29 line 88 modal footer button name 수정 -->
+                        <div class="modalWrap">
+                            <div id="modal" class="edit-modal tag-edit">
+                                <div class="modalHeader">
+                                    <h1 class="logo"><img src="img/logo.png" alt=""></h1>
+                                    <button class="hide-btn"><img src="img/close_btn.png" alt=""></button>
+                                </div>
+                                <!-- end modalHeader -->
+                                <div class="modalBody">
+                                    <div class="form tag-form">
+                                        <p>관심 태그를 선택하세요.</p>
+                                        <div class="tag-list">
+                                            <input type="checkbox" name="" id="" class="on" value=""><label for="">#커플</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#크리에이터</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#친구랑</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#가족</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#웰니스</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#비즈니스</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#네트워킹</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#리프레시</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#맛집</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#쇼핑</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#클래스</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#액티비티</label>
+                                            <input type="checkbox" name="" id="" value=""><label for="">#Kids</label>
+                                        </div>
+                                        <!-- end tag-list -->
+                                    </div>
+                                    <!-- end form -->
+                                </div>
+                                <!-- end modalBody -->
+                                <div class="modalFooter">
+                                    <input type="button" name="hide-btn" value="저장하기" onclick="tag_fin();">
+                                </div>
+                                <!-- end modalFooter -->
+                            </div>
+                            <!-- end modal -->
+                            <div id="modal" class="edit-modal email-edit">
+                                <div class="modalHeader">
+                                    <h1 class="logo"><img src="img/logo.png" alt=""></h1>
+                                    <button class="hide-btn"><img src="img/close_btn.png" alt=""></button>
+                                </div>
+                                <!-- end modalHeader -->
+                                <div class="modalBody">
+                                    <div class="form user-info">
+                                        <p>이메일</p>
+                                        <div class="edit-form">
+                                            <input type="text" name="" id="">
+                                            <span class="at">@</span>
+                                            <div class="selectBox addr-select">
+                                                <select name="" id="" class="addr-sel">
+                                                    <option value="naver.com">naver.com</option>
+                                                    <option value="hanmail.net">hanmail.net</option>
+                                                    <option value="gmail.com">gmail.com</option>
+                                                    <option value="direct">직접입력</option>
+                                                </select>
+                                                <div class="selBoxDirect">
+                                                    <input type="text" name="">
+                                                    <button class="hide-direct"><img src="img/close_btn.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                            <!-- end selectBox -->
+                                        </div>
+                                        <!-- end edit-form -->
+                                    </div>
+                                    <!-- end form -->
+                                </div>
+                                <!-- end modalBody -->
+                                <div class="modalFooter">
+                                    <input type="button" name="hide-btn" value="변경하기" onclick="email_fin();">
+                                </div>
+                                <!-- end modalFooter -->
+                            </div>
+                            <!-- end modal -->
+                            <div id="modal" class="edit-modal pw-edit">
+                                <div class="modalHeader">
+                                    <h1 class="logo"><img src="img/logo.png" alt=""></h1>
+                                    <button class="hide-btn"><img src="img/close_btn.png" alt=""></button>
+                                </div>
+                                <!-- end modalHeader -->
+                                <div class="modalBody">
+                                    <div class="form user-info">
+                                        <p>변경할 비밀번호를 입력하세요.</p>
+                                        <div class="edit-form">
+                                            <div class="edit-pw pw-01-inp">
+                                                <p>새 비밀번호</p>
+                                                <input type="password" name="" id="new_pw_01" placeholder="비밀번호">
+                                                <p class="alert"></p>
+                                            </div>
+                                            <!-- end edit-pw -->
+                                            <div class="edit-pw pw-02-inp">
+                                                <p>새 비밀번호 확인</p>
+                                                <input type="password" name="" id="new_pw_02" placeholder="비밀번호">
+                                                <p class="alert"></p>
+                                            </div>
+                                            <!-- end edit-pw -->
+                                        </div>
+                                        <!-- end edit-form -->
+                                    </div>
+                                    <!-- end form -->
+                                </div>
+                                <!-- end modalBody -->
+                                <div class="modalFooter">
+                                    <input type="button" name="hide-btn" value="저장하기" onclick="pwEdit();">
+                                </div>
+                                <!-- end modalFooter -->
+                            </div>
+                            <!-- end modalWrap -->
+                        </div>
+                        <!-- end modal-bg -->
+                    </div>
+                    <!-- end inner-content -->
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end mypage -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Scrollbar -->
+    <link href="plugin/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- selectBox.js -->
+    <script src="plugin/selectBox_custom/jquery.selectric.js"></script>
+    <script>
+        $(function() {
+            $('select').selectric({
+                disableOnMobile: false,
+                nativeOnMobile: false
+            });
+
+            $(".selBoxDirect").hide();
+            $(".addr-sel").selectric().on("change", function() {
+                if ($(".addr-sel").val() == "direct") {
+                    $(".selectric-addr-sel").hide();
+                    $(".selBoxDirect").show();
+                } else {
+                    $(".selectric-addr-sel").show();
+                    $(".selBoxDirect").hide();
+                }
+            });
+            $(".selBoxDirect .hide-direct").on("click", function() {
+                $(".selectric-addr-sel").show();
+                $(".selBoxDirect").hide();
+            });
+
+        });
+
+        // 21/11/10 add area 
+
+
+        // tag_edit_modal
+
+        function tag_fin() {
+            alert("관심 키워드가 저장되었습니다.");
+            $(".modalWrap").hide();
+            $(".tag-edit").hide();
+        }
+
+        // email_edit_modal 
+
+        function email_fin() {
+            alert("이메일 주소가 변경되었습니다.");
+            $(".modalWrap").hide();
+            $(".email-edit").hide();
+        }
+
+        // pw_edit_modal 
+        $('#new_pw_01').keyup(function() {
+
+            if ($("#new_pw_01").val()) {
+                $(".user-info .pw-01-inp .alert").text("");
+            }
+
+        });
+        $('#new_pw_02').keyup(function() {
+
+            if ($("#new_pw_01").val() != $("#new_pw_02").val()) {
+                $(".user-info .pw-02-inp .alert").text("비밀번호가 일치하지 않습니다.").css('color', '#e74c3c');
+            } else {
+                $(".user-info .pw-02-inp .alert").text('비밀번호가 일치합니다.').css('color', '#00B441');
+            }
+
+        });
+
+        function pwEdit() {
+            if (!$("#new_pw_01").val() || !$("#new_pw_02").val() || $("#new_pw_01").val() != $("#new_pw_02").val()) {
+                if (!$("#new_pw_01").val()) {
+                    $(".user-info .pw-01-inp .alert").text("비밀번호를 입력해주세요.");
+                } else {
+                    $(".user-info .pw-01-inp .alert").text("");
+                }
+                if (!$("#new_pw_02").val()) {
+                    $(".user-info .pw-02-inp .alert").text("비밀번호 확인을 입력해주세요.");
+                } else {
+                    $(".user-info .pw-02-inp .alert").text("");
+                }
+                if ($("#new_pw_01").val() != $("#new_pw_02").val()) {
+                    $(".user-info .pw-02-inp .alert").text("비밀번호가 일치하지 않습니다.").css('color', '#e74c3c');
+                }
+
+            } else {
+                alert("비밀번호가 변경되었습니다.");
+                $(".modalWrap").hide();
+                $(".pw-edit").hide();
+
+            }
+        }
+    </script>
+</body>
+
+</html>

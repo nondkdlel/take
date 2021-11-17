@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="login" class="members-zone">
+            <div class="inner-content">
+                <div class="head">
+                    <h1>Login</h1>
+                    <p>테이크에 오신 것을 환영합니다.</p>
+                </div>
+                <!-- end head -->
+                <form id="attend_form" class="login-form" action="my_reservation.html">
+                    <div class="inp-box id-inp">
+                        <p>아이디</p>
+                        <input type="text" id="userId" name="" placeholder="아이디를 입력해주세요.">
+                        <p class="alert"></p>
+                    </div>
+                    <!-- end inp-box -->
+                    <div class="inp-box pw-inp">
+                        <p>비밀번호</p>
+                        <input type="password" id="userPw" name="" placeholder="비밀번호를 입력해주세요.">
+                        <p class="alert"></p>
+                    </div>
+                    <!-- end inp-box -->
+                    <input class="stepMove" type="button" value="입장하기" onclick="login_fin();">
+                </form>
+                <!-- end login-form-->
+                <div class="customer-tab">
+                    <ul>
+                        <li><a href="join_step01.html">회원가입</a></li>
+                        <li class="bar">|</li>
+                        <li><a href="lost_password.html">비밀번호 찾기</a></li>
+                    </ul>
+                </div>
+                <!-- end customer-tab -->
+            </div>
+            <!-- end inner-content -->
+        </div>
+        <!-- end login -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(function() {
+
+            $("#userId").keyup(function() {
+
+                var ko_check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+                var checkSpc = /[~!@#$%^&*()_+|<>?:{}]/;
+                var user_id = $('#userId').val();
+
+                if (ko_check.test(user_id)) {
+                    $(".login-form .id-inp .alert").text("아이디는 영문으로 입력해주세요.");
+                } else if (checkSpc.test(user_id)) {
+                    $(".login-form .id-inp .alert").text("아이디에는 특수문자를 사용할 수 없습니다.");
+                } else {
+                    $(".login-form .id-inp .alert").text("");
+                }
+
+            });
+
+        })
+
+        function login_fin() {
+
+            var ko_check = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+            var checkSpc = /[~!@#$%^&*()_+|<>?:{}]/;
+            var user_id = $('#userId').val();
+
+            if (!$("#userId").val() || !$("#userPw").val() || ko_check.test(user_id) || checkSpc.test(user_id)) {
+                if (!$("#userId").val()) {
+                    $(".login-form .id-inp .alert").text("아이디를 입력해주세요.");
+                } else {
+                    $(".login-form .id-inp .alert").text("");
+                }
+                if (ko_check.test(user_id)) {
+                    $(".login-form .id-inp .alert").text("아이디는 영문으로 입력해주세요.");
+                }
+                if (checkSpc.test(user_id)) {
+                    $(".login-form .id-inp .alert").text("아이디에는 특수문자를 사용할 수 없습니다.");
+                }
+                if (!$("#userPw").val()) {
+                    $(".login-form .pw-inp .alert").text("비밀번호를 입력해주세요.");
+                } else {
+                    $(".login-form .pw-inp .alert").text("");
+                }
+            } else {
+                $('#attend_form').submit();
+            }
+        }
+    </script>
+</body>
+
+</html>

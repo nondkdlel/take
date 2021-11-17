@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- swiper css-->
+    <link rel="stylesheet" href="plugin/swiper/swiper.min.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="mypage" class="wrapContent">
+            <div class="modal-bg">
+                <div id="modal" class="cancel-modal">
+                    <div class="modalHeader">
+                        <h1 class="logo"><img src="img/logo.png" alt=""></h1>
+                        <button class="hide-btn"><img src="img/close_btn.png" alt=""></button>
+                    </div>
+                    <!-- end modalHeader -->
+                    <div class="modalBody">
+                        <p>정말로 취소하시겠습니까?</p>
+                    </div>
+                    <!-- end modalBody -->
+                    <div class="modalFooter">
+                        <input type="button" class="again-btn" value="네, 취소할게요" onclick="booking_cancel();">
+                        <input type="button" class="hide-btn" value="아니오">
+                    </div>
+                    <!-- end modalFooter -->
+                </div>
+                <!-- end modal -->
+            </div>
+            <!-- end modal-bg -->
+            <div class="container font-0">
+                <aside>
+                    <p class="pageTitle">My</p>
+                    <nav>
+                        <ul>
+                            <a class="on" href="my_reservation.html">
+                                <li>Reservation</li>
+                                <li>내 예약</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <a href="my_favorite.html">
+                                <li>Favorite</li>
+                                <li>찜한 프로그램</li>
+                            </a>
+                        </ul>
+                        <ul>
+                            <a href="my_information.html">
+                                <li>Information</li>
+                                <li>정보</li>
+                            </a>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="content">
+                    <div id="myBooking" class="swiper-container">
+                        <div class="pageHead">
+                            <p class="tit">My Reservation</p>
+                            <div class="sliderNum">
+                                <p>다른 예약 (<span></span>)</p>
+                            </div>
+                        </div>
+                        <!-- end pageHead -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="inner-content reservation">
+                                    <div class="row-floor stay-info">
+                                        <div class="cm-split booking-user">
+                                            <div class="tit-box">
+                                                <p>예약정보</p>
+                                                <input type="button" value="예약 취소" onclick="cancel();">
+                                            </div>
+                                            <!-- end thead -->
+                                            <div class="cm-artice user-info">
+                                                <ul>
+                                                    <li class="user-name"><i class="fas fa-user-alt"></i>김조은</li>
+                                                    <li class="unique-num">20890413</li>
+                                                </ul>
+                                            </div>
+                                            <!-- end cm-artice -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                        <div class="cm-split">
+                                            <p class="thead">체크인 체크아웃</p>
+                                            <div class="cm-artice user-calendar">
+                                                <div class="date">
+                                                    <p>04.16.</p>
+                                                    <span>15:00 부터</span>
+                                                </div>
+                                                <div class="date">
+                                                    <p>04.18.</p>
+                                                    <span>11:00 까지</span>
+                                                </div>
+                                            </div>
+                                            <!-- end cm-artice -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                    </div>
+                                    <!-- end row-floor -->
+                                    <div class="row-floor">
+                                        <div class="cm-split">
+                                            <p class="thead">객실 투숙 정보</p>
+                                            <div class="room-info">
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>객실 타입</li>
+                                                        <li>Take2 King bed (Tub)</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>패키지</li>
+                                                        <li>Room + Infinity Pool</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>투숙 인원</li>
+                                                        <li>성인 3, 아동 0</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>조식</li>
+                                                        <li>0</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                            </div>
+                                            <!-- end room-info -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                    </div>
+                                    <!-- end row-floor -->
+                                    <!-- 21/11/09 line 138 intro-area content hide -->
+                                    <!-- <div class="intro-area">
+                                        <div class="program-intro split-box">
+                                            <div class="headArea">
+                                                <p class="thead">추천 프로그램</p>
+                                            </div>
+                                            <div class="inner-content">
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- end inner-content -->
+                            </div>
+                            <!-- end swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="inner-content reservation">
+                                    <div class="row-floor stay-info">
+                                        <div class="cm-split booking-user">
+                                            <div class="tit-box">
+                                                <p>예약정보</p>
+                                                <input type="button" value="예약 취소" onclick="cancel();">
+                                            </div>
+                                            <!-- end thead -->
+                                            <div class="cm-artice user-info">
+                                                <ul>
+                                                    <li class="user-name"><i class="fas fa-user-alt"></i>김조은</li>
+                                                    <li class="unique-num">20890413</li>
+                                                </ul>
+                                            </div>
+                                            <!-- end cm-artice -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                        <div class="cm-split">
+                                            <p class="thead">체크인 체크아웃</p>
+                                            <div class="cm-artice user-calendar">
+                                                <div class="date">
+                                                    <p>04.16.</p>
+                                                    <span>15:00 부터</span>
+                                                </div>
+                                                <div class="date">
+                                                    <p>04.18.</p>
+                                                    <span>11:00 까지</span>
+                                                </div>
+                                            </div>
+                                            <!-- end cm-artice -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                    </div>
+                                    <!-- end row-floor -->
+                                    <div class="row-floor">
+                                        <div class="cm-split">
+                                            <p class="thead">객실 투숙 정보</p>
+                                            <div class="room-info">
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>객실 타입</li>
+                                                        <li>Take2 King bed (Tub)</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>패키지</li>
+                                                        <li>Room + Infinity Pool</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>투숙 인원</li>
+                                                        <li>성인 3, 아동 0</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                                <div class="cm-artice">
+                                                    <ul class="stay-info">
+                                                        <li>조식</li>
+                                                        <li>0</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- end cm-artice -->
+                                            </div>
+                                            <!-- end room-info -->
+                                        </div>
+                                        <!-- end cm-split -->
+                                    </div>
+                                    <!-- end row-floor -->
+                                    <!-- 21/11/09 line 267 intro-area content hide -->
+                                    <!-- <div class="intro-area">
+                                        <div class="program-intro split-box">
+                                            <div class="headArea">
+                                                <p class="thead">추천 프로그램</p>
+                                            </div>
+                                            <div class="inner-content">
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="line-box">
+                                                    <div class="element-box" onclick="location.href='play_detail.html'">
+                                                        <a class="list-medium">
+                                                            <img src="img/facility_businesscenter_thum.jpeg" alt="">
+                                                        </a>
+                                                        <div class="intro-thum">
+                                                            <p class="tit">현직 셰프와 함께 하는 타코 요리 클래스</p>
+                                                            <p class="intro-txt">여기에 간단한 소개를 입력하세요.</p>
+                                                            <ul class="brief-info">
+                                                                <li>신나는 인증샷 네트워킹</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <!-- end inner-content -->
+                            </div>
+                            <!-- end swiper-slide -->
+                        </div>
+                        <!-- end swiper-wrapper -->
+                        <div class="swiper-button-prev"><i class="fas fa-angle-left"></i></div>
+                        <div class="swiper-button-next"><i class="fas fa-angle-right"></i></div>
+                    </div>
+                    <!-- end swiper-container -->
+                </div>
+                <!-- end content -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end mypage -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Swiper CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        $(function() {
+            var myBooking = new Swiper("#myBooking", {
+                slidesPerView: 1,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            var pageNum = $("#myBooking .swiper-slide-active").attr("aria-label");
+            $("#myBooking .pageHead .sliderNum span").text(pageNum);
+            myBooking.on("transitionEnd", function() {
+                var pageNum = $("#myBooking .swiper-slide-active").attr("aria-label");
+                $("#myBooking .pageHead .sliderNum span").text(pageNum);
+            });
+        });
+
+        // line 381 function cancel 추가
+
+        function cancel() {
+            $(".modal-bg").show();
+            $("#modal.cancel-modal").show();
+        }
+
+        $("#modal.cancel-modal .modalHeader .hide-btn").click(function() {
+            $(".modal-bg").hide();
+            $("#modal.cancel-modal").hide();
+        });
+        $("#modal.cancel-modal .modalFooter input").click(function() {
+            $(".modal-bg").hide();
+            $("#modal.cancel-modal").hide();
+        });
+
+        function booking_cancel() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var date = today.getDate();
+            var thisDay = year + "-" + month + "-" + date;
+            console.log(thisDay)
+            var reservation_data = "";
+
+            if (thisDay == reservation_data) {
+                alert("당일 예약 취소는 예약실로 문의바랍니다. 전화 : 02-2000-7100");
+            } else {
+                alert("취소처리 되었습니다.");
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

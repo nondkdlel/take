@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="img/og_image.jpg">
+    <meta property="og:description" content="Family Playground. 온 가족이 따로 또 같이 즐길 수 있는 새로운 호텔">
+    <title>테이크호텔</title>
+    <link rel="shortcut icon" href="img/take_favicon.ico">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- selectBox CSS -->
+    <link rel="stylesheet" href="plugin/selectBox_custom/selectric.css">
+    <!-- scrollbar css -->
+    <!-- <link href="plugin/scrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" /> -->
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="headers"></div>
+        <div id="about">
+            <div class="visual-head">
+                <div class="pageTitle">
+                    <h1>Customer Service</h1>
+                </div>
+            </div>
+            <!-- end visual-head -->
+            <div class="common-effect">
+                <form id="fr_contact" name="fr_contact" class="support container inner-common">
+                    <h1>문의하기</h1>
+                    <div class="data-form">
+                        <table>
+                            <colgroup>
+                                <col width="30%">
+                                <col width="70%">
+                            </colgroup>
+                            <tbody>
+                                <tr class="data-fr01">
+                                    <th>
+                                        <p>문의유형</p>
+                                    </th>
+                                    <td>
+                                        <div class="selectBox width-100 contact-type">
+                                            <select name="type-sel" id="type-sel" onchange="contactSel()">
+                                                <option value="non-sel">선택</option>
+                                                <option value="type01">객실 / 패키지 예약 관련</option>
+                                                <option value="type02">액티비티 프로그램 관련</option>
+                                                <option value="type03">호텔 시설 이용 안내</option>
+                                                <option value="type04">서비스 이용 안내</option>
+                                                <option value="type05">대관 및 단체 예약 문의</option>
+                                                <option value="type06">멤버십 문의</option>
+                                                <option value="type07">홈페이지 이용 관련</option>
+                                                <option value="type08">채용 관련 문의</option>
+                                                <option value="type09">기타 문의</option>
+                                                <option value="type10">객실 예약 취소 관련</option>
+                                            </select>
+                                        </div>
+                                        <!-- end selectBox -->
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr class="data-fr02">
+                                    <th>
+                                        <p>제목</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="" id="tit_inp" placeholder="제목을 입력하세요">
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr class="data-fr03">
+                                    <th>
+                                        <p>내용</p>
+                                    </th>
+                                    <td>
+                                        <textarea name="" id="content_inp" placeholder="내용을 입력하세요."></textarea>
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr class="data-fr04">
+                                    <th>
+                                        <p>이름</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="" id="user_nm" placeholder="이름을 입력하세요">
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr class="data-fr05">
+                                    <th>
+                                        <p>휴대폰</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="" id="user_cell" placeholder="'-'없이 번호만 입력">
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr class="data-fr06">
+                                    <th>
+                                        <p>이메일</p>
+                                    </th>
+                                    <td>
+                                        <input type="text" name="" id="user_email" placeholder="이메일 주소">
+                                        <p class="alert"></p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="not-after">
+                                        <p>첨부파일</p>
+                                    </th>
+                                    <td class="attach">
+                                        <input readonly class="file-name" type="text" value="선택된 파일이 없습니다.">
+                                        <input type="file" id="upload" style="display: none;"><label class="upload-btn" for="upload">파일선택</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- end data-form -->
+                    <div class="post-btn"><input type="button" value="보내기" onclick="sendSupport();"></div>
+                </form>
+                <!-- end container -->
+            </div>
+            <!-- end common-effect -->
+        </div>
+        <!-- end about -->
+        <div id="footers"></div>
+    </div>
+    <!-- end wrap -->
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!-- selectBox.js -->
+    <script src="plugin/selectBox_custom/jquery.selectric.js"></script>
+    <!-- Scrollbar -->
+    <!-- <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script> -->
+    <script>
+        $('select').selectric({
+            disableOnMobile: false,
+            nativeOnMobile: false
+        });
+        $(function() {
+
+            var fileTarget = $('#upload');
+            fileTarget.on('change', function() {
+                var file_name = $("#upload").val();
+                $(".file-name").val(file_name);
+            });
+
+        });
+
+
+        function contactSel() {
+            var selectedEl = document.getElementById("type-sel");
+            var optionVal = selectedEl.options[selectedEl.selectedIndex].value;
+            console.log(optionVal)
+            if (optionVal != "non-sel") {
+                $(".support .data-fr01 .alert").text("");
+            }
+        }
+        $("#tit_inp").keyup(function() {
+            var tit_val = $("#tit_inp").val();
+            if (tit_val) {
+                $(".support .data-fr02 .alert").text("");
+            }
+        });
+        $("#content_inp").keyup(function() {
+            var content_val = $("#content_inp").val();
+            if (content_val) {
+                $(".support .data-fr03 .alert").text("");
+            }
+        });
+        $("#user_nm").keyup(function() {
+            var name_val = $("#user_nm").val();
+            if (name_val) {
+                $(".support .data-fr04 .alert").text("");
+            }
+        });
+        $("#user_cell").keyup(function() {
+            var cell_val = $("#user_cell").val();
+            if (cell_val) {
+                $(".support .data-fr05 .alert").text("");
+            }
+        });
+        $("#user_email").keyup(function() {
+            var email_val = $("#user_email").val();
+            if (email_val) {
+                $(".support .data-fr06 .alert").text("");
+            }
+        });
+
+        function sendSupport() {
+
+            var type_option = $("select[name='type-sel']").val();
+
+            if (type_option == "non-sel" || !$("#tit_inp").val() || !$("#content_inp").val() || !$("#user_nm").val() || !$("#user_cell").val() || !$("#user_email").val()) {
+
+                if (type_option == "non-sel") {
+                    $(".support .data-fr01 .alert").text("문의 유형을 선택하세요.");
+                } else {
+                    $(".support .data-fr01 .alert").text("");
+                }
+
+                if (!$("#tit_inp").val()) {
+                    $(".support .data-fr02 .alert").text("제목을 입력하세요.");
+                } else {
+                    $(".support .data-fr02 .alert").text("");
+                }
+                if (!$("#content_inp").val()) {
+                    $(".support .data-fr03 .alert").text("내용을 입력하세요.");
+                } else {
+                    $(".support .data-fr03 .alert").text("");
+                }
+                if (!$("#user_nm").val()) {
+                    $(".support .data-fr04 .alert").text("이름을 입력하세요.");
+                } else {
+                    $(".support .data-fr04 .alert").text("");
+                }
+                if (!$("#user_cell").val()) {
+                    $(".support .data-fr05 .alert").text("휴대폰 번호를 입력하세요.");
+                } else {
+                    $(".support .data-fr05 .alert").text("");
+                }
+                if (!$("#user_email").val()) {
+                    $(".support .data-fr06 .alert").text("이메일을 입력하세요.");
+                } else {
+                    $(".support .data-fr06 .alert").text("");
+                }
+            } else {
+
+                alert("문의하신 내용이 전달 되었습니다. 빠른 시일 내에 답변 드리겠습니다.")
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
