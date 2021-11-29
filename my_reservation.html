@@ -121,34 +121,42 @@
                                         <div class="cm-split">
                                             <p class="thead">객실 투숙 정보</p>
                                             <div class="room-info">
-                                                <div class="cm-artice">
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>객실 타입</li>
                                                         <li>Take2 King bed (Tub)</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                                </div> <!-- end wrapBox -->
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>패키지</li>
                                                         <li>Room + Infinity Pool</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                                </div><!-- end wrapBox -->
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>투숙 인원</li>
                                                         <li>성인 3, 아동 0</li>
                                                     </ul>
                                                 </div>
-                                                <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                                <!-- end cm-artice --> 
+                                                </div> <!-- end wrapBox -->
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>조식</li>
                                                         <li>0</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
+                                                </div> <!-- end wrapBox -->
                                             </div>
                                             <!-- end room-info -->
                                         </div>
@@ -250,34 +258,42 @@
                                         <div class="cm-split">
                                             <p class="thead">객실 투숙 정보</p>
                                             <div class="room-info">
-                                                <div class="cm-artice">
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>객실 타입</li>
                                                         <li>Take2 King bed (Tub)</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                                </div> <!-- end wrapBox -->
+                                               <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>패키지</li>
                                                         <li>Room + Infinity Pool</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                               </div> <!-- end wrapBox -->
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>투숙 인원</li>
                                                         <li>성인 3, 아동 0</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
-                                                <div class="cm-artice">
+                                                </div> <!-- end wrapBox -->
+                                                <div class="wrapBox">
+                                                    <div class="cm-artice">
                                                     <ul class="stay-info">
                                                         <li>조식</li>
                                                         <li>0</li>
                                                     </ul>
                                                 </div>
                                                 <!-- end cm-artice -->
+                                                </div> <!-- end wrapBox -->
                                             </div>
                                             <!-- end room-info -->
                                         </div>
@@ -357,10 +373,10 @@
     <!-- end wrap -->
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+      <!-- Swiper CDN -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
-    <!-- Swiper CDN -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         $(function() {
             var myBooking = new Swiper("#myBooking", {
@@ -370,6 +386,7 @@
                     prevEl: ".swiper-button-prev",
                 },
             });
+            
             var pageNum = $("#myBooking .swiper-slide-active").attr("aria-label");
             $("#myBooking .pageHead .sliderNum span").text(pageNum);
             myBooking.on("transitionEnd", function() {
@@ -377,6 +394,7 @@
                 $("#myBooking .pageHead .sliderNum span").text(pageNum);
             });
         });
+        
 
         // line 381 function cancel 추가
 

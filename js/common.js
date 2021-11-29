@@ -1,45 +1,44 @@
-$(function() {
+$(function () {
     $("#headers").load("common/header.html");
     $("#footers").load("common/footer.html");
 
 
-    $("#headers").load("common/header.html", function() {
+    $("#headers").load("common/header.html", function () {
         var href = window.location.href
-        if (href.includes("/about_story.html")) {
-            jQuery("#headers nav li:eq(0)").addClass("on")
+
+        if (href.indexOf("/about_story.html") >= 0) {
+            jQuery("#headers nav li:eq(0)").addClass("on");
         };
-        if (href.includes("/stay.html") || href.includes("/stay_take1.html") || href.includes("/stay_take2.html") || href.includes("/stay_take3.html") || href.includes("/stay_take4.html") || href.includes("/stay_takeX.html") || href.includes("/stay_take27.html")) {
+        if (href.indexOf("/stay.html") >= 0 || href.indexOf("/stay_take1.html") >= 0 || href.indexOf("/stay_take2.html") >= 0 || href.indexOf("/stay_take3.html") >= 0 || href.indexOf("/stay_take4.html") >= 0 || href.indexOf("/stay_takeX.html") >= 0 || href.indexOf("/stay_take27.html") >= 0) {
+            jQuery("#headers nav li:eq(1)").addClass("on");
+        };
+        if (href.indexOf("/stay_take1_single_loft_shower_detail.html") >= 0 || href.indexOf("/stay_take1_single_shower_detail.html") >= 0 || href.indexOf("/stay_take2_king_tub_detail.html") >= 0 || href.indexOf("/stay_take2_king_shower_detail.html") >= 0 || href.indexOf("/stay_take3_king_tub_detail.html") >= 0 || href.indexOf("/stay_take3_king_shower_detail.html") >= 0 || href.indexOf("/stay_take4_detail.html") >= 0 || href.indexOf("/stay_takeX_white_detail.html") >= 0 || href.indexOf("/stay_takeX_pink_detail.html") >= 0 || href.indexOf("/stay_takeX_mint_detail.html") >= 0 || href.indexOf("/stay_take27_detail.html") >= 0) {
             jQuery("#headers nav li:eq(1)").addClass("on")
         };
-        if (href.includes("/stay_take1_single_loft_shower_detail.html") || href.includes("/stay_take1_single_shower_detail.html") || href.includes("/stay_take2_king_tub_detail.html") || href.includes("/stay_take2_king_shower_detail.html") || href.includes("/stay_take3_king_tub_detail.html") || href.includes("/stay_take3_king_shower_detail.html") || href.includes("/stay_take4_detail.html") || href.includes("/stay_takeX_white_detail.html") || href.includes("/stay_takeX_pink_detail.html") || href.includes("/stay_takeX_mint_detail.html") || href.includes("/stay_take27_detail.html")) {
-            jQuery("#headers nav li:eq(1)").addClass("on")
-        };
-        if (href.includes("/play.html") || href.includes("/play_tag.html") || href.includes("/play_program.html") || href.includes("/play_original.html") || href.includes("/play_detail.html")) {
+        if (href.indexOf("/play.html") >= 0 || href.indexOf("/play_tag.html") >= 0 || href.indexOf("/play_program.html") >= 0 || href.indexOf("/play_original.html") >= 0 || href.indexOf("/play_detail.html") >= 0) {
             jQuery("#headers nav li:eq(2)").addClass("on")
         };
-        if (href.includes("/link_rent.html") || href.includes("/link_collabo.html") || href.includes("/link_collabo_detail.html") || href.includes("/link_neighborhood.html")) {
-            jQuery("#headers nav li:eq(3)").addClass("on")
+        if (href.indexOf("/link_rent.html") >= 0 || href.indexOf("/link_collabo.html") >= 0 || href.indexOf("/link_collabo_detail.html") >= 0 || href.indexOf("/link_neighborhood.html") >= 0) {
+            jQuery("#headers nav li:eq(3)").addClass("on");
+
         };
-        if (href.includes("/special_offer.html") || href.includes("/special_offer_package.html") || href.includes("/special_offer_package_detail.html") || href.includes("/special_offer_promotion.html") || href.includes("/special_offer_promotion_detail.html")) {
+        if (href.indexOf("/special_offer.html") >= 0 || href.indexOf("/special_offer_package.html") >= 0 || href.indexOf("/special_offer_package_detail.html") >= 0 || href.indexOf("/special_offer_promotion.html") >= 0 || href.indexOf("/special_offer_promotion_detail.html") >= 0) {
             jQuery("#headers nav li:eq(4)").addClass("on")
         };
-        if (href.includes("/weddingmeet.html") || href.includes("/wedding_detail.html") || href.includes("/meet_detail.html")) {
+        if (href.indexOf("/weddingmeet.html") >= 0 || href.indexOf("/wedding_detail.html") >= 0 || href.indexOf("/meet_detail.html") >= 0) {
             jQuery("#headers nav li:eq(5)").addClass("on")
         };
-        if (href.includes("/eat_and_drink.html") || href.includes("/eat_detail.html") || href.includes("/drink_detail.html")) {
+        if (href.indexOf("/eat_and_drink.html") >= 0 || href.indexOf("/eat_detail.html") >= 0 || href.indexOf("/drink_detail.html") >= 0) {
             jQuery("#headers nav li:eq(6)").addClass("on")
         };
-        if (href.includes("/facility.html")) {
+        if (href.indexOf("/facility.html") >= 0) {
             jQuery("#headers nav li:eq(7)").addClass("on")
         };
-        // if (href.includes("/membership.html")) {
-        //     jQuery("#headers nav li:eq(7)").addClass("on")
-        // };
-        if (href.includes("/my_reservation.html") || href.includes("/my_favorite.html") || href.includes("/my_information.html") || href.includes("/my_empty.html") || href.includes("/my_no_login_reservation.html")) {
+        if (href.indexOf("/my_reservation.html") >= 0 || href.indexOf("/my_favorite.html") >= 0 || href.indexOf("/my_information.html") >= 0 || href.indexOf("/my_empty.html") >= 0 || href.indexOf("/my_no_login_reservation.html") >= 0) {
             jQuery("#headers nav li:eq(8)").addClass("on")
         };
-        if (href.includes("/login.html") || href.includes("/join_step01.html") || href.includes("/join_step02.html") || href.includes("/join_step03.html") || href.includes("/join_us.html") || href.includes("/lost_password.html")) {
-            jQuery("#headers nav li:eq(9)").addClass("on")
+        if (href.indexOf("/login.html") >= 0 || href.indexOf("/join_step01.html") >= 0 || href.indexOf("/join_step02.html") >= 0 || href.indexOf("/join_step03.html") >= 0 || href.indexOf("/join_us.html") >= 0 || href.indexOf("/lost_password.html") >= 0) {
+            jQuery("#headers nav li:eq(9)").addClass("on");
         };
 
 
